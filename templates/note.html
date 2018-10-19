@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes</title>
+</head>
+<body>
+          <h2>Notes</h2>
+
+          <form method='POST' action=''>{% csrf_token %}
+            {{ form.as_p }}
+            <input type='submit'>
+
+          </form>
+          <ul>
+          {% for note in notes.all %}
+              <li>{{ note.text }}</li>
+          {% endfor %}
+          </ul>
+
+
+</body>
+</html>
